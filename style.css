@@ -1,19 +1,15 @@
-/*Denna för att ta bort alla margin på en webbsida som finns där by default. Kallas för Normalizing CSS.*/
 body{
     margin: auto 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .zone{
-    /* padding:30px 50px;
-    margin:40px 60px; */
-    cursor:pointer;         /*ändrar mus till mickey mouse*/
-    /* display:inline-block; */
+    cursor:pointer;       
     color:#FFF;
     font-size:1em;
     border-radius:4px;
     border: 1px solid #bbb;
-    transition: all 0.3s linear;    /*elementen zoomas ut till rätt storlek*/
+    transition: all 0.3s linear; 
 }
 
 .box:hover{
@@ -23,36 +19,20 @@ body{
     transform: rotate(4.5deg);
 }
 
-
-/*------------- NAV-BAR ------------*/
-/*Göra så att nav-bar följer med när man scrollar*/
-/*Dessa tre properties är givna gällande fixed nav-bar*/
-/*
-    .sticky{
-        position: fixed;                /*fixed = atta den alltid ska finnas med på sidan
-        top: 0;                         /*börja från top
-        width: 100%;                    /*gör nav-bar 100%
-    }
-*/
-
 .main-nav{
-    display: flex;              /*aktivera flexbox för ul-listan*/
-    list-style: none;           /*ta bort punkterna på listan*/
+    display: flex;              
+    list-style: none;           
     margin: 0;
     font-size: 1.2em;
 }
 
-/*@media tillåter oss att skapa responsiva webbsidor för alla enheter*/
-/*vi säger att, visa detta tills sidan är över 600px*/
 @media only screen and (max-width: 600px){
-    /*vi vill att main-nav ska visa detta tills sidan är över 600px*/
     .main-nav{
-        font-size: 0.8em;       /*visa 0.5em storlek under 600px*/
-        padding: 0;             /*ta bort all padding så texten är närmare*/
+        font-size: 0.8em;       
+        padding: 0;             
     }
 }
 
-/*flytta Contacts längst till höger i nav-bar*/
 .push{
     margin-left: auto;
     margin-right: 40px;
@@ -60,55 +40,47 @@ body{
 
 /*modifiera listan*/
 li{
-    padding: 20px;              /*ge mellanrum för nav listan*/
+    padding: 20px;       
 }
 
 a{
-    color: #f5f5f6;           /*ändra färg på anchor-elementen*/    
-    text-decoration: none;      /*ta bort underline*/                     
+    color: #f5f5f6;            
+    text-decoration: none;                        
 }
 
 
 /*------------- COVER ------------*/
 .container{
     font-size: 100px;
-    display: flex;              /*aktivera flex*/
-
-    /*ALLTID centrera i mitten genom dessa två*/
+    display: flex;            
     align-items: center;        
     justify-content: center;
-    
-    /*px bestämmer att elementet ska vara 500px oavsett mindre skala på sidan. 0% responsivitet.*/
     height: 500px;              
-    /*vh(viewport height). 50vh visar 50% av sidan oavsett mindre skala på sidan. 100% responsivitet.*/
     height: 50vh;               
 }
 
 
 /*------------- GRID ------------*/
 .grid-wrapper{
-    display: grid;              /*aktivera grid*/
-    grid-gap: 20px;             /*mellanrum mellan elementen*/
+    display: grid;            
+    grid-gap: 20px;         
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .box > img{
-    width: 100%;                /*vi fyller bilderna till 100% av grid:sen*/
+    width: 100%;                
 }
 
 .box{
     background-color: rgb(236, 238, 239);
-    /*padding: 50px;              /*detta om vi vill göra bilderna mindre*/
-    margin: 15px;               /*lägga space mellan varje bild*/
+    margin: 15px;               
 }
-
 
 
 /*------------- FOOTER ------------*/
 footer{
     text-align: center;
 }
-
 
 
 /*------------- BACGROUND-COLORS ------------*/
